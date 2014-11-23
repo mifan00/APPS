@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摘星星</title>
+
+<style type="text/css">
+body {
+	background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-position:top;
+	
+}
+</style>
+</head>
+
+<body>
+<body text="00ffff" bgcolor="設定">
+
+<script type="text/javascript">
+function AlertIt() {
+	//亂數
+	var myrandom=Math.round(Math.random()*2)
+	//訊息清單
+	var messages=new Array()
+	messages[0]="沒靈感？"
+	messages[1]="很無聊？"
+	messages[2]="想找什麼？"
+	//連結清單
+	var links=new Array()
+	links[0]="http://www.citytalk.tw/cata/57/?city=28&offset=3&sort=view"
+	links[1]="http://www.songshanculturalpark.org/"
+	links[2]="http://www.pinkoi.com/"
+	links[3]="https://www.google.com.tw/?gfe_rd=cr&ei=J6txVJfXAoqmmQWj5IDgDA"
+	//點下去要顯示
+	var answer = confirm (messages[myrandom])
+	//如果點「是」
+	if (answer)
+	window.location=links[myrandom]
+	if (!answer)
+	window.location=links[3]
+}
+</script> 
+
+<marquee direction="left" scrollamount="5" >
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="javascript:AlertIt();"><img src="star.png" width="50" height="60" alt="a" /></a></p>
+</marquee>
+<marquee direction="right" >
+<p><a href="javascript:AlertIt();"><img src="star.png" width="30" height="40" alt="a" /></a></p>
+</marquee><marquee direction="left" >
+<a href="javascript:AlertIt();"><img src="star.png" width="40" height="50" alt="a" /></a>
+</marquee>
+
+
+</body>
+</html>
